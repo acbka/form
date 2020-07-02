@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form</title>
+   <script src="https://unpkg.com/feather-icons"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="./img/form.png" type="image/x-icon">
+</head>
+
+<body>
+   <header>
+      <nav class="navbar navbar-expand-lg main-menu">
+         <a class="navbar-brand big_logo" href="#"><img class="logo-dark" src="./img/logo-dark.png" alt=""></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i data-feather="menu"></i></span>
+         </button>
+         <a class="navbar-brand small_logo" href="#"><img src="./img/logo-icon.png" width="58"></a>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item active">
+                  <a class="nav-link" href="https://demo.createx.studio/around/index.html" target="_blank">Demos <span
+                        class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="https://demo.createx.studio/around/demo-mobile-app.html" target="_blank">Templates</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="https://demo.createx.studio/around/contacts-v1.html" target="_blank">Original</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Form</a>
+               </li>
+            </ul>
+         </div>
+         <div class="login d-flex align-items-center mr-1 ml-lg-auto">
+            <a class="btn btn-primary main-btn go-form" href="#">Form</a>
+         </div>
+      </nav>
+   </header>
+   <div class="main" id="top">
+      <div class="main-header col-lg-10 mx-auto">
+         <h1 class="text-light">Contacts</h1>
+         <p class="text-light">Get in touch with by completing the below form or call us now</p>
+      </div>
+      <div class="cs-shape cs-shape-bottom cs-shape-slant bg-body">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 260">
+            <polygon fill="#fff" points="0,257 0,260 3000,260 3000,0"></polygon>
+         </svg>
+      </div>
+   </div>
+   <div class="form-section container pb-5 mb-5">
+      <div class="row pb-5">
+         <div class="form col-lg-6 col-md-7 offset-lg-1">
+            <div class="card">
+               <form class="card-body p-5">
+                  <h6 class="form-header">Before You Begin</h6>
+                  <div class="form-group">
+                     <label class="form-label mb-3" for="branch">Please select the NZLH Branch Closest To You<sup class="text-danger ml-1">*</sup></label> 
+                     <select class="select custom-select" id="branch" name="branch" required>
+                         <option value=""></option>
+                         <option value="auckland">Auckland</option>
+                         <option value="hamilton">Hamilton</option>
+                         <option value="wellington">Wellington</option>
+                     </select>
+                        <div class="invalid-feedback">Please select the branch!</div>
+                     </div>
+                  <h6 class="form-header">Personal Data</h6>
+                  <p class="form-text">Before you start please have ready, your passport, birth sertificate, driver's license and any proof of your qualifications.</p>
+                  <div class="form-group">
+                     <label class="form-label" for="date">Birth Date<sup class="text-danger ml-1">*</sup></label>
+                     <input class="form-control" type="date" id="date" required>
+                     <div class="invalid-feedback">Please enter the correct your of your birth!</div>
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" for="selfie">Take a selfie for your file - [Files of type: jpg, jpeg, gif, png & pdf] (Limited to 1MB)</label>
+                     <div class="d-flex">
+                        <input class="form-control pb-2" type="file" id="selfie" accept=".jpg, .jpeg, .gif, .png, .pdf">
+                        <!--<button class="upload" type="button">Upload</button> -->
+                     </div>
+                     <div class="invalid-feedback selfie-feedback">Please check the size of the file!</div>
+                  </div>
+                  <div class="row">
+                     <div class="form-group col-lg-6">
+                        <label class="form-label" for="first-name">First name<sup class="text-danger ml-1">*</sup></label>
+                        <input class="form-control" type="text" id="first-name" placeholder="John" size="50" required>
+                        <div class="invalid-feedback">Please enter your first name!</div>
+                     </div>
+                     <div class="form-group col-lg-6">
+                        <label class="form-label" for="last-name">Last name<sup class="text-danger ml-1">*</sup></label>
+                        <input class="form-control" type="text" id="last-name" placeholder="Smith" size="50" required>
+                        <div class="invalid-feedback">Please enter your last name!</div>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" for="email">Email address<sup class="text-danger ml-1">*</sup></label>
+                     <input class="form-control" type="email" id="email" placeholder="j.smith@example.com" required="">
+                     <div class="invalid-feedback">Please enter a valid email address!</div>
+                  </div>
+                  <div class="row">
+                     <div class="form-group col-lg-6">
+                        <label class="form-label" for="phone">Mobile phone<sup class="text-danger ml-1">*</sup></label>
+                        <input class="form-control phone" type="text" id="phone" data-format="custom" 
+                         placeholder="__-_______"  required>
+                           <div class="invalid-feedback">Please enter your mobile phone!</div>
+                     </div>
+                     <div class="form-group col-lg-6">
+                        <label class="form-label" for="phone">Home phone</label>
+                        <input class="form-control phone" type="text" id="homePhone" data-format="custom" 
+                           data-blocks="2 4 2 2" placeholder="__-____-__-__">
+                     </div>
+                  </div>
+                  <div class="send pt-2">
+                     <button class="btn btn-primary main-btn" type="submit">Submit</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="contact col-lg-4 col-md-4 offset-md-1">
+            <h2>Contact details</h2>
+            <h3>North America - New York, NY</h3>
+            <div class="contact-details">
+               <div class="d-flex mb-3">
+                  <i class="mt-1 address-icon" data-feather="map-pin"></i>
+                  <div>396 Lillian Blvd, Holbrook,
+                     <br>
+                     NY 11741, USA
+                     <br>
+                     <a class="map-link" href="#map" data-scroll="">See on the map</a>
+                  </div>
+               </div>
+               <div class="d-flex mb-3">
+                  <i class="mt-1 address-icon" data-feather="mail"></i>
+                  <div>new.york@example.com</div>
+               </div>
+               <div class="d-flex mb-3">
+                  <i class="mt-1 address-icon" data-feather="phone"></i>
+                  <div>+ 1 526 220 0459</div>
+               </div>
+            </div>
+            <h3>Europe - Berlin, Germany</h3>
+            <div class="contact-details">
+               <div class="d-flex mb-3">
+                  <i class="mt-1 address-icon" data-feather="map-pin"></i>
+                  <div>Mohrenstrasse 37 10117,
+                     <br>
+                     Berlin, Germany
+                     <br>
+                  </div>
+               </div>
+               <div class="d-flex mb-3">
+                  <i class="mt-1 address-icon" data-feather="mail"></i>
+                  <div>berlin@example.com</div>
+               </div>
+               <div class="d-flex align-items-center mb-3">
+                  <i class="mt-1 address-icon" data-feather="phone"></i>
+                  <div>030 778 345 26</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="map" id="map">
+      <a  href="https://www.google.com/maps/place/396+Lillian+Blvd,+Holbrook,+NY+11741,+USA/@40.7928618,-73.0784627,16.13z/data=!4m5!3m4!1s0x89e8483b8bffed93:0x53467ceb834b7397!8m2!3d40.7940399!4d-73.0737162?hl=en" target="_blank"><img class="img" src="./img/map02.jpg" alt=""></a>
+      <img class="marker" src="./img/marker.png" alt="">
+   </div>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.91476818218!2d-74.11976253858133!3d40.69740344296443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sua!4v1568574342685!5m2!1sen!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"><img src="./img/map01.jpg" alt=""></iframe>
+   <footer>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6 footer-logo">
+               <a class="d-block mb-3" href="#"><img class="footer-logo-dark" src="./img/logo-footer-alt.png" alt=""></a>
+               <p class="footer-text">Highly customizable and modular official multipurpose Bootstrap template and UI kit.</p>
+               <a class="social-button facebook" href=""><i class="fab fa-facebook-f social-icon"></i></a>
+               <a class="social-button twitter" href=""><i class="fab fa-twitter social-icon"></i></a>
+               <a class="social-button instagram" href=""><i class="fab fa-instagram social-icon"></i></a>
+               <a class="social-button google" href=""><i class="fab fa-google social-icon"></i></a>  
+            </div>
+            <div class="col-lg-6 footer-menu">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-sm-4">
+                        <h4>Company</h4>
+                        <ul>
+                           <li class="footer-menu-item"><a href="#">About</a></li>
+                           <li class="footer-menu-item"><a href="#">Careers</a></li>
+                           <li class="footer-menu-item"><a href="#">Press</a></li>
+                        </ul>
+                     </div>
+                     <div class="col-sm-4">
+                        <h4>Communities</h4>
+                        <ul>
+                           <li class="footer-menu-item"><a href="#">For artists</a></li>
+                           <li class="footer-menu-item"><a href="#">Developers</a></li>
+                           <li class="footer-menu-item"><a href="#">Brands</a></li>
+                           <li class="footer-menu-item"><a href="#">Investors</a></li>
+                        </ul>
+                     </div>
+                     <div class="col-sm-4">
+                        <h4>Our news</h4>
+                        <ul>
+                           <li class="footer-menu-item"><a href="#">Latest news</a></li>
+                           <li class="footer-menu-item"><a href="#">Updates</a></li>
+                           <li class="footer-menu-item"><a href="#">Campaigns</a></li>
+                        </ul>
+                     </div>
+                  </div>   
+               </div>
+            </div>
+         </div>
+         <hr class="hr">
+      </div>
+      <div class="container">
+         <div class="row justify-content-between">
+            <div class="col-md-6 navbar navbar-expand-lg order-md-2">
+               <ul class="navbar-nav list-inline footer-bottom-menu">
+                  <li class="footer-bottom-menu-item"><a href="#">Support</a></li>
+                  <li class="footer-bottom-menu-item"><a href="#">Contacts</a></li>
+                  <li class="footer-bottom-menu-item"><a href="#">Terms & Conditions</a></li>
+               </ul>
+            </div>
+            <div class="col-md-6 all-rights order-md-1">
+               <p class="footer-text">© All rights reserved. Made by <span class="span-footer">Me</span></p>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!--   to top -->
+   <a class="scroll">
+      <span class="scroll-text text-muted mr-2">Top</span>
+      <i data-feather="arrow-up"></i></a>
+   <script>
+      feather.replace()
+   </script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+   </script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+   </script>
+   <script src="./script.js"></script>
+</body>
+
+</html>
