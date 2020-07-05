@@ -348,7 +348,7 @@ ul{
    display: none;
    position: fixed;
    top: 21%;
-   left: calc((100vw - 646px)/2);
+   left: calc((100vw - 600px)/2);
    background: #fff;
    text-align: center;
    border-radius: 1rem;
@@ -370,7 +370,7 @@ ul{
    cursor: pointer;
 }
 .xclose:hover{
-   transform: scale(1.5, 1.5);
+   transform: scale(1.3, 1.3);
 }
 .xclose:before, .xclose:after {
    position: absolute;
@@ -425,10 +425,30 @@ ul{
    header{
       padding: 0 .75rem;
    }
+   .scroll{
+      height: 45px;
+      width: 45px;
+      padding-top: 5px;
+   }
+   .popup{
+      width: 500px;
+      left: calc((100vw - 500px)/2);
+   }
 }
 @media screen and (max-width: 576px){
    .navbar{
       flex-direction: column;
       align-items: center;
+   }
+   .scroll{
+      height: 45px;
+      width: 45px;
+   }
+   .show-button {
+      right: 20px;
+   }
+   .popup{
+      width: 300px;
+      left: calc((100vw - 300px)/2);
    }
 }
