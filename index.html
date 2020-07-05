@@ -35,7 +35,7 @@
                   <a class="nav-link" href="https://demo.createx.studio/around/contacts-v1.html" target="_blank">Original</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Form</a>
+                  <a class="nav-link active" href="#">Form</a>
                </li>
             </ul>
          </div>
@@ -59,15 +59,15 @@
       <div class="row pb-5">
          <div class="form col-lg-6 col-md-7 offset-lg-1">
             <div class="card">
-               <form class="card-body p-5">
+               <form class="card-body p-5" method="POST" name="form">
                   <h6 class="form-header">Before You Begin</h6>
                   <div class="form-group">
                      <label class="form-label mb-3" for="branch">Please select the NZLH Branch Closest To You<sup class="text-danger ml-1">*</sup></label> 
-                     <select class="select custom-select" id="branch" name="branch" required>
-                         <option value=""></option>
-                         <option value="auckland">Auckland</option>
-                         <option value="hamilton">Hamilton</option>
-                         <option value="wellington">Wellington</option>
+                     <select class="select custom-select" id="branch" name="Branch" required>
+                        <option value=""></option>
+                        <option value="auckland">Auckland</option>
+                        <option value="hamilton">Hamilton</option>
+                        <option value="wellington">Wellington</option>
                      </select>
                         <div class="invalid-feedback">Please select the branch!</div>
                      </div>
@@ -75,13 +75,13 @@
                   <p class="form-text">Before you start please have ready, your passport, birth sertificate, driver's license and any proof of your qualifications.</p>
                   <div class="form-group">
                      <label class="form-label" for="date">Birth Date<sup class="text-danger ml-1">*</sup></label>
-                     <input class="form-control" type="date" id="date" required>
+                     <input class="form-control" type="date" id="date" name="Birth Date" required>
                      <div class="invalid-feedback">Please enter the correct your of your birth!</div>
                   </div>
                   <div class="form-group">
-                     <label class="form-label" for="selfie">Take a selfie for your file - [Files of type: jpg, jpeg, gif, png & pdf] (Limited to 1MB)</label>
+                     <label class="form-label" for="selfie">Take a selfie for your file - [Files of type: jpg, jpeg, gif, png & pdf] (Limited to 1MB)<sup class="text-danger ml-1">*</sup></label>
                      <div class="d-flex">
-                        <input class="form-control pb-2" type="file" id="selfie" accept=".jpg, .jpeg, .gif, .png, .pdf">
+                        <input class="form-control pb-2" type="file" id="selfie" name="Photo" accept=".jpg, .jpeg, .gif, .png, .pdf" required>
                         <!--<button class="upload" type="button">Upload</button> -->
                      </div>
                      <div class="invalid-feedback selfie-feedback">Please check the size of the file!</div>
@@ -89,35 +89,35 @@
                   <div class="row">
                      <div class="form-group col-lg-6">
                         <label class="form-label" for="first-name">First name<sup class="text-danger ml-1">*</sup></label>
-                        <input class="form-control" type="text" id="first-name" placeholder="John" size="50" required>
+                        <input class="form-control" type="text" id="first-name"  name="First Name" placeholder="John" maxlength="50" required>
                         <div class="invalid-feedback">Please enter your first name!</div>
                      </div>
                      <div class="form-group col-lg-6">
                         <label class="form-label" for="last-name">Last name<sup class="text-danger ml-1">*</sup></label>
-                        <input class="form-control" type="text" id="last-name" placeholder="Smith" size="50" required>
+                        <input class="form-control" type="text" id="last-name" name="Last Name" placeholder="Smith" maxlength="50" required>
                         <div class="invalid-feedback">Please enter your last name!</div>
                      </div>
                   </div>
                   <div class="form-group">
                      <label class="form-label" for="email">Email address<sup class="text-danger ml-1">*</sup></label>
-                     <input class="form-control" type="email" id="email" placeholder="j.smith@example.com" required="">
+                     <input class="form-control" type="email" id="email" name="Email Address" placeholder="j.smith@example.com" required="">
                      <div class="invalid-feedback">Please enter a valid email address!</div>
                   </div>
                   <div class="row">
                      <div class="form-group col-lg-6">
                         <label class="form-label" for="phone">Mobile phone<sup class="text-danger ml-1">*</sup></label>
-                        <input class="form-control phone" type="text" id="phone" data-format="custom" 
+                        <input class="form-control phone" type="text" id="phone" name="Mobile Phone" data-format="custom" 
                          placeholder="__-_______"  required>
                            <div class="invalid-feedback">Please enter your mobile phone!</div>
                      </div>
                      <div class="form-group col-lg-6">
                         <label class="form-label" for="phone">Home phone</label>
-                        <input class="form-control phone" type="text" id="homePhone" data-format="custom" 
+                        <input class="form-control phone" type="text" id="homePhone" name="Home Phone" data-format="custom" 
                            data-blocks="2 4 2 2" placeholder="__-____-__-__">
                      </div>
                   </div>
                   <div class="send pt-2">
-                     <button class="btn btn-primary main-btn" type="submit">Submit</button>
+                     <button class="btn btn-primary main-btn" id="submit" type="submit">Submit</button>
                   </div>
                </form>
             </div>
@@ -231,6 +231,13 @@
          </div>
       </div>
    </footer>
+   <!--pop-up -->
+   <div class="overlay"></div>
+   <div class="popup">
+      <div class="xclose"></div>
+      <p class="thanks"></p>
+      <button class="btn btn-primary main-btn close-button">Close</button>            
+   </div>
    <!--   to top -->
    <a class="scroll">
       <span class="scroll-text text-muted mr-2">Top</span>

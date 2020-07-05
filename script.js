@@ -73,7 +73,7 @@ const onChange = () => {
       error.classList.add("show");
    } else  {
       fileName = attachedFile.name;
-   }
+   } 
 }  
 
 // tel
@@ -93,7 +93,6 @@ const handleInput = ({data, target, inputType}) => {
    const strippedValue = stripToNumbers(value);
    const lastDigit = strippedValue[strippedValue.length-1];
    const maxLenght = placeholder.length - 1;
-
    if(strippedValue.length >= maxLenght) {
       target.value = value.slice(0, placeholder.length);
       return
@@ -108,6 +107,42 @@ const handleInput = ({data, target, inputType}) => {
    target.selectionStart = target.value.lastIndexOf(lastDigit)+1;
 };
 
+// submit
+
+const submit = document.querySelector("form"); 
+const formFields = Array.from(document.querySelectorAll("[required]"));
+
+
+const submitForm = (event) => {
+   event.preventDefault();
+   popupWindow();
+   submit.reset();
+}
+
+const overlay = document.querySelector(".overlay");
+const popup = document.querySelector(".popup");
+const thanks = document.querySelector(".thanks");
+const closeButton = document.querySelector(".close-button");
+const xclose = document.querySelector(".xclose");
+
+const popupWindow = () => {
+   overlay.classList.add("show");
+   popup.classList.add("show");
+   thanks.innerHTML = "Thanks " + formFields[3].value + " " + formFields[4].value + " for submitting your form";
+   closeButton.addEventListener("click", function(){
+      overlay.classList.remove("show");
+      popup.classList.remove("show");
+   });
+   xclose.addEventListener("click", function(){
+      overlay.classList.remove("show");
+      popup.classList.remove("show");
+   });
+   overlay.addEventListener("click", function(){
+      overlay.classList.remove("show");
+      popup.classList.remove("show");
+   })
+}
+
 // init
 
 const init = () => {  
@@ -119,6 +154,7 @@ const init = () => {
    phoneInput.forEach(element => {
       element.addEventListener("input", handleInput)
    });
+   submit.addEventListener("submit", submitForm)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
